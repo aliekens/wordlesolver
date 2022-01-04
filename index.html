@@ -1,0 +1,23 @@
+<html>
+<head>
+	<script type="text/javascript" src="wordle.js"></script>
+</head>
+<body onload="computeSuggestion()">
+	<h1>Wordle solver/helper</h1>
+	<p>By <a href="http://twitter.com/aliekens">@aliekens</a>
+	<hr/>
+	<form>
+		<p>Found characters: <input type="text" maxlength="1" size="1" id="letter0" onchange="computeSuggestion()"/><input type="text" maxlength="1" size="1" id="letter1" onchange="computeSuggestion()"/><input type="text" maxlength="1" size="1" id="letter2" onchange="computeSuggestion()"/><input type="text" maxlength="1" size="1" id="letter3" onchange="computeSuggestion()"/><input type="text" maxlength="1" size="1" id="letter4" onchange="computeSuggestion()"/></p>
+		<p>Required characters: <input type="text" id="requiredcharacters" onchange="computeSuggestion()"/></p>
+		<p>Forbidden characters: <input type="text" id="forbiddencharacters" onchange="computeSuggestion()"/></p>
+	</form>
+	<hr/>
+	<p>Most informative guess: <strong><span id="guess" style="font-size:200%"></span></strong></p>
+	<p>Found <span id="matchescount"></span> matches.</p>
+	<p>Best guesses:</p>
+	<ul id="bestguesses">
+	</ul>
+	<hr/>
+	<p>This <a href="https://www.powerlanguage.co.uk/wordle/">Wordle</a> solver/helper helps solving wordle puzzles. It uses 5757 5-letter words to determine the most informative guesses that will most likely help you get to a solution. You need to do a bit of thinking yourself, e.g., the solver doesn't know about positions that required letters cannot be in ...</p>
+</body>
+</html>
